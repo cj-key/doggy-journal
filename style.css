@@ -2,14 +2,16 @@
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
+    margin-top: 0; /* Add top margin to the title */
 }
 
 .container {
-    max-width: 500px;
+    max-width: 600px; /* Increase the maximum width for better spacing */
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
     text-align: center; /* Center align the content */
+    box-sizing: border-box; /* Include padding in the total width */
 }
 
 .header {
@@ -19,13 +21,14 @@
 }
 
 .tile {
-    flex-basis: 45%; /* Increase the width of the tile */
+    flex-basis: 30%; /* Adjust the width of the tile */
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px; /* Increase the padding to create more space */
     min-height: 200px; /* Set a minimum height */
+    margin-bottom: 20px; /* Add bottom margin to separate the tiles */
+    box-sizing: border-box; /* Include padding in the total width */
 }
-
 
 .activity {
     font-weight: bold;
@@ -44,13 +47,10 @@
     font-size: 18px; /* Increase the font size */
 }
 
-
-
 .timestamps {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    position: absolute;
 }
 
 .timestamps div {
@@ -60,6 +60,7 @@
 .arrows {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px; /* Add top margin to the arrows */
 }
 
 .arrow {
