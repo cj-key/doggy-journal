@@ -5,44 +5,46 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="page">
+    <h1 class="title">Doggy Journal</h1>
+    <div class="header-container">
+        <div class="header">
+            <div id="date"></div>
+            <div id="time"></div>
+        </div>
         <button class="arrow arrow-left" onclick="navigateDay(-1)">&lt;</button>
-        <h1 class="title">Doggy Journal</h1>
         <button class="arrow arrow-right" onclick="navigateDay(1)">&gt;</button>
-        <div class="container">
-            <div class="header">
-                <div id="date"></div>
-                <div id="time"></div>
+    </div>
+    <div class="container">
+        <div class="tiles">
+            <div class="tile" id="food">
+                <div class="activity">Food</div>
+                <div class="bar">
+                    <div class="fill" id="foodBarFill"></div>
+                </div>
+                <button class="button" onclick="changeBar('food', -1)">-</button>
+                <button class="button" onclick="changeBar('food', 1)">+</button>
+                <div id="foodTimestamps" class="timestamps"></div>
             </div>
-            <div class="tiles">
-                <div class="tile" id="food">
-                    <div class="activity">Food</div>
-                    <div class="bar">
-                        <div class="fill" id="foodBarFill"></div>
-                    </div>
-                    <button class="button" onclick="changeBar('food', 1)">+</button>
-                    <button class="button" onclick="changeBar('food', -1)">-</button>
-                    <div id="foodTimestamps" class="timestamps"></div>
+            
+            <div class="tile" id="water">
+                <div class="activity">Water</div>
+                <div class="bar">
+                    <div class="fill" id="waterBarFill"></div>
                 </div>
-                <div class="tile" id="water">
-                    <div class="activity">Water</div>
-                    <div class="bar">
-                        <div class="fill" id="waterBarFill"></div>
-                    </div>
-                    <button class="button" onclick="changeBar('water', 1)">+</button>
-                    <button class="button" onclick="changeBar('water', -1)">-</button>
-                    <div id="waterTimestamps" class="timestamps"></div>
-                </div>
-                <div class="tile" id="potty">
-                    <div class="activity">Potty Time</div>
-                    <div class="bar">
-                        <div class="fill" id="pottyBarFill"></div>
-                    </div>
-                    <button class="button" onclick="changeBar('potty', 1)">+</button>
-                    <button class="button" onclick="changeBar('potty', -1)">-</button>
-                    <div id="pottyTimestamps" class="timestamps"></div>
-                </div>
+                <button class="button" onclick="changeBar('water', -1)">-</button>
+                <button class="button" onclick="changeBar('water', 1)">+</button>
+                <div id="waterTimestamps" class="timestamps"></div>
             </div>
+            
+            <div class="tile" id="potty">
+                <div class="activity">Potty Time</div>
+                <div class="bar">
+                    <div class="fill" id="pottyBarFill"></div>
+                </div>
+                <button class="button" onclick="changeBar('potty', -1)">-</button>
+                <button class="button" onclick="changeBar('potty', 1)">+</button>
+                <div id="pottyTimestamps" class="timestamps"></div>
+            </div>  
         </div>
     </div>
 

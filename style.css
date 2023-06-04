@@ -1,3 +1,24 @@
+body {
+    background-image: url("linedpaper.jpg");
+    background-repeat: no-repeat;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#date {
+    text-align: center;
+}
+
+
+#time {
+    display: none;
+
+}
 .title {
     text-align: center;
     font-size: 32px;
@@ -21,13 +42,13 @@
 }
 
 .tile {
-    flex-basis: 30%; /* Adjust the width of the tile */
-    border: 1px solid #ccc;
+    width: 600px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    border: 1px dashed #ccc;
     border-radius: 5px;
-    padding: 20px; /* Increase the padding to create more space */
-    min-height: 200px; /* Set a minimum height */
-    margin-bottom: 20px; /* Add bottom margin to separate the tiles */
-    box-sizing: border-box; /* Include padding in the total width */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the total width and height */
+    margin-bottom: 20px;
 }
 
 .activity {
@@ -45,6 +66,8 @@
     background-color: #ccc;
     cursor: pointer;
     font-size: 18px; /* Increase the font size */
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
 }
 
 .timestamps {
@@ -71,6 +94,19 @@
     cursor: pointer;
     font-size: 18px; /* Increase the font size */
 }
+
+.arrow-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.arrow-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 
 .bar {
     width: 100%;
