@@ -1,0 +1,89 @@
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center align the content */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tile {
+    flex-basis: 45%; /* Increase the width of the tile */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px; /* Increase the padding to create more space */
+    min-height: 200px; /* Set a minimum height */
+}
+
+
+.activity {
+    font-weight: bold;
+    font-size: 24px; /* Increase the font size */
+    margin-bottom: 10px;
+}
+
+.button {
+    margin: 5px;
+    margin-bottom: 15px; /* Add more space below the button */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    font-size: 18px; /* Increase the font size */
+}
+
+
+
+.timestamps {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.timestamps div {
+    margin-bottom: 5px;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    font-size: 18px; /* Increase the font size */
+}
+
+.bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #67c23a;
+    width: 0;
+    transition: width 0.3s ease;
+}
