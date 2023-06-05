@@ -1,39 +1,52 @@
 body {
-    background-image: url("linedpaper.jpg");
-    background-repeat: no-repeat;
+    background-image: url("images/linedpaper.jpg");
+    background-repeat: cover;
 }
 
 .header-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 20px;
+    text-align: right;
 }
-
-#date {
-    text-align: center;
-}
-
 
 #time {
     display: none;
+}
 
+.tiles .tile {
+    margin-bottom: 40px;
 }
-.title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
-    margin-top: 0; /* Add top margin to the title */
+
+.tile {
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 20px;
 }
+
+.tile-main {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.tile-right {
+    grid-column: 2;
+    grid-row: 1;
+}
+
 
 .container {
-    max-width: 600px; /* Increase the maximum width for better spacing */
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    text-align: center; /* Center align the content */
-    box-sizing: border-box; /* Include padding in the total width */
+    text-align: center;
+    box-sizing: border-box;
 }
+
 
 .header {
     display: flex;
@@ -41,49 +54,59 @@ body {
     margin-bottom: 20px;
 }
 
-.tile {
-    width: 600px; /* Set a fixed width */
-    height: 300px; /* Set a fixed height */
-    border: 1px dashed #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in the total width and height */
-    margin-bottom: 20px;
-}
-
 .activity {
+    text-align: center;
     font-weight: bold;
-    font-size: 24px; /* Increase the font size */
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
 .button {
     margin: 5px;
-    margin-bottom: 15px; /* Add more space below the button */
+    margin-bottom: 15px;
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
     background-color: #ccc;
     cursor: pointer;
-    font-size: 18px; /* Increase the font size */
-    width: 40px; /* Set a fixed width */
-    height: 40px; /* Set a fixed height */
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+}
+
+.timestamp-heading {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .timestamps {
-    display: flex;
-    flex-direction: column;
     margin-top: 10px;
+    text-align: left;
+}
+
+.images {
+    height: 100px;
+    margin-bottom: 10px;
+    text-align: right;
+    position: sticky;
+}
+
+.images img {
+    max-height: 100%;
+    max-width: 100%;
+    margin-top: 100px;
 }
 
 .timestamps div {
     margin-bottom: 5px;
+    text-align: left;
 }
 
 .arrows {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px; /* Add top margin to the arrows */
+    margin-top: 20px;
 }
 
 .arrow {
@@ -92,7 +115,7 @@ body {
     border: none;
     background-color: #ccc;
     cursor: pointer;
-    font-size: 18px; /* Increase the font size */
+    font-size: 18px;
 }
 
 .arrow-left {
@@ -107,14 +130,8 @@ body {
     right: 20px;
 }
 
-
 .bar {
-    width: 100%;
-    height: 20px;
-    background-color: #eee;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    position: relative;
+    display: none;
 }
 
 .fill {

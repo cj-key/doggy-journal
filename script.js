@@ -34,16 +34,18 @@ function saveTimestampsToStorage(activity, timestamps) {
     localStorage.setItem(activity + 'Timestamps' + dateKey, JSON.stringify(timestamps));
 }
 
+// Function to display timestamps for a given activity
 function displayTimestamps(activity, timestamps) {
     var activityTimestamps = document.getElementById(activity + 'Timestamps');
     activityTimestamps.innerHTML = '';
 
     for (var i = 0; i < timestamps.length; i++) {
         var newTimestamp = document.createElement('div');
-        newTimestamp.innerText = timestamps[i];
+        newTimestamp.innerText = (i + 1) + '. ' + timestamps[i];
         activityTimestamps.appendChild(newTimestamp);
     }
 }
+
 
 function getBarFillFromStorage(activity) {
     var dateKey = displayedDate.toISOString().substring(0, 10);
@@ -55,6 +57,7 @@ function saveBarFillToStorage(activity, fillWidth) {
     var dateKey = displayedDate.toISOString().substring(0, 10);
     localStorage.setItem(activity + 'BarFill' + dateKey, JSON.stringify(fillWidth));
 }
+
 
 function changeBar(activity, value) {
     var barFill = document.getElementById(activity + 'BarFill');
@@ -69,6 +72,14 @@ function changeBar(activity, value) {
     barFill.style.width = fillWidth + '%';
     saveBarFillToStorage(activity, fillWidth);
 
+    if (activity === 'food') {
+        updateFoodImage(fillWidth / 25);
+    } else if (activity === 'water') {
+        updateWaterImage(fillWidth / 25);
+    } else if (activity === 'potty') {
+        updatePottyImage(fillWidth / 25);
+    }
+
     var currentDate = new Date();
     if (displayedDate.toDateString() == currentDate.toDateString()) {
         if (value > 0) {
@@ -77,6 +88,24 @@ function changeBar(activity, value) {
             removeTimestamp(activity);
         }
     }
+}
+
+// Function to update the food image based on the bar fill
+function updateFoodImage(fillValue) {
+    var foodImage = document.getElementById('foodImage');
+    foodImage.src = 'images/dogfoodbowl' + fillValue + '.png';
+}
+
+// Function to update the water image based on the bar fill
+function updateWaterImage(fillValue) {
+    var waterImage = document.getElementById('waterImage');
+    waterImage.src = 'images/pitcher' + fillValue + '.png';
+}
+
+// Function to update the potty image based on the bar fill
+function updatePottyImage(fillValue) {
+    var pottyImage = document.getElementById('pottyImage');
+    pottyImage.src = 'images/hydrant' + fillValue + '.png';
 }
 
 function navigateDay(offset) {
