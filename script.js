@@ -1,5 +1,9 @@
 var displayedDate = new Date();
 
+function hideCover() {
+    document.getElementById('cover').style.display = 'none';
+}
+
 function addTimestamp(activity) {
     var timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     var activityTimestamps = getTimestampsFromStorage(activity);
