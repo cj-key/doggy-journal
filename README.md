@@ -12,12 +12,12 @@ A simple app for tracking your dogs daily needs.
 7. [Contact](#contact)
 ## Overview
 Doggy Journal is a simple web application that helps dog owners to keep track of their dog's daily activities such as feeding, hydration, and potty breaks. It uses a visual and interactive interface to allow users to easily record and review their pet’s activities.
-![Doggy Journal Screenshot](./screenshot.png)
+
 ## Video Tutorial
 The following video explains the application in detail:
-```html
-<iframe src="https://www.youtube.com/embed/9lMETUXBc-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-```
+
+Coming Soon!
+
 ## Tech Stack
 JavaScript Bricks is built using the following technologies:
 - JavaScript: The game logic and interactions.
